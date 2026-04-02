@@ -25,7 +25,7 @@ const Hero = () => {
                         <img
                           src={word.imgpath}
                           alt={word.text}
-                          className="xl:size-12 md:size-10 size-8 md:p-2 p-1 rounded-full bg-white-50 object-contain"
+                          className="xl:size-12 md:size-10 size-8 md:p-2 p-1 rounded-full bg-white-50"
                         />
 
                         <span>{word.text}</span>

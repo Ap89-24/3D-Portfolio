@@ -8,3 +8,11 @@ export const words = [
     {text: "System" , imgpath: "/images/system.svg"},
     {text: "Interface" , imgpath: "/images/interface.svg"},
 ];
+
+
+export const counterItems = [
+  { value: 1, suffix: "+", label: "Years of Experience" },
+  { value: 10, suffix: "+", label: "Satisfied Clients" },
+  { value: 20, suffix: "+", label: "Completed Projects" },
+  { value: 60, suffix: "%", label: "Client Retention Rate" },
+];

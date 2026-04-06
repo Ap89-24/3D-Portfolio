@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = ({text , className , id}) => {
+const Button = ({text , className , id , onTrigger}) => {
   return (
    <a
    onClick={(e) => {
@@ -14,6 +14,9 @@ const Button = ({text , className , id}) => {
          const top = target.getBoundingClientRect().top + window.scrollY - offset;
 
          window.scrollTo({top , behavior: "smooth"})
+
+          if (onTrigger) onTrigger();
+
     }
    }}
    className={`${className ?? ""} cta-wrapper`}>

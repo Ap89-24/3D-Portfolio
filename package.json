@@ -20,6 +20,7 @@
     "react-countup": "^6.5.3",
     "react-dom": "^19.2.4",
     "react-responsive": "^10.0.1",
+    "react-slot-counter": "^3.3.2",
     "tailwindcss": "^4.2.2",
     "three": "^0.183.2"
   },

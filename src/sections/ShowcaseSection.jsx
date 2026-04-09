@@ -1,12 +1,57 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
 import { FaGithub } from "react-icons/fa";
+import {useGSAP} from "@gsap/react"
+
+
+
+gsap.registerPlugin(ScrollTrigger)
 
 const ShowcaseSection = () => {
+
+  const sectionRef = useRef(null);
+  const project1Ref = useRef(null);
+  const project2Ref = useRef(null);
+  const project3Ref = useRef(null);
+
+  useGSAP(() => {
+
+    const projects = [project1Ref.current , project2Ref.current , project3Ref.current];
+
+     projects.forEach((project , index) => {
+          gsap.fromTo(
+            project,
+            {
+              y: 50 , 
+              opacity: 0
+            },
+            {
+              y: 0,
+              opacity: 1 ,
+              duration: 1,
+              delay: 0.3 * (index + 1),
+              scrollTrigger: {
+                trigger: project,
+                start: 'top bottom-=100'
+              }
+            },
+          )
+     })
+
+          gsap.fromTo(
+      sectionRef.current,
+      {opacity: 0},
+      {opacity: 1 , duration: 1.5}
+     );
+  } , [])
+
   return (
-    <div id="work" className="app-showcase">
+    <section id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
         <div className="showcaselayout">
           {/*//? LEFT */}
-          <div className="first-project-wrapper">
+          <div className="first-project-wrapper" ref={project1Ref}>
             <div className="image-wrapper">
               <img
                 src="/images/myproduct1.png"
@@ -26,7 +71,7 @@ const ShowcaseSection = () => {
                 organize unforgettable experiences faster and smarter.
               </p>
               <a
-                href="https://github.com/Ap89-24/Expense-Tracker"
+                href="https://github.com/Ap89-24/AI-Event-Organizer"
                 target="_blank"
                 className="flex items-center gap-2 text-purple-600 hover:underline"
               >
@@ -37,7 +82,7 @@ const ShowcaseSection = () => {
           </div>
           {/*//? RIGHT */}
           <div className="project-list-wrapper overflow-hidden">
-            <div className="project">
+            <div className="project" ref={project2Ref}>
               <div className="image-wrapper bg-[#ffefdb]">
                 <img src="/images/myproduct2.png" alt="Expense Management" />
               </div>
@@ -59,7 +104,7 @@ const ShowcaseSection = () => {
               </a>
             </div>
 
-            <div className="project">
+            <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#ffe7db]">
                 <img src="/images/project3.png" alt="Expense Management" />
               </div>
@@ -83,7 +128,7 @@ const ShowcaseSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

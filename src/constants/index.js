@@ -1,3 +1,23 @@
+
+export const navLinks = [
+  {
+    name: "Work",
+    link: "#work",
+  },
+  {
+    name: "Experience",
+    link: "#experience",
+  },
+  {
+    name: "Skills",
+    link: "#skills",
+  },
+  {
+    name: "Testimonials",
+    link: "#testimonials",
+  },
+];
+
 export const words = [
     {text: "Ideas" , imgpath: "/images/ideas.svg"},
     {text: "Code" , imgpath: "/images/code.svg"},

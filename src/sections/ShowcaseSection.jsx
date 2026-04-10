@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef } from "react";
 import { FaGithub } from "react-icons/fa";
 import {useGSAP} from "@gsap/react"
+import { motion } from "framer-motion";
 
 
 
@@ -49,6 +50,14 @@ const ShowcaseSection = () => {
   return (
     <section id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
+      <motion.h1
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      viewport={{ once: true }}
+       class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text leading-tight  drop-shadow-[0_0_20px_rgba(168,85,247,0.5)] mb-7">
+            Things I’ve Built
+      </motion.h1>
         <div className="showcaselayout">
           {/*//? LEFT */}
           <div className="first-project-wrapper" ref={project1Ref}>

@@ -72,3 +72,31 @@ export const logoIconsList = [
     imgPath: "/images/logos/company-logo-11.png",
   },
 ];
+
+export const abilities = [
+  {
+    imgPath: "/images/seo.png",
+    title: "Quality-Driven Development",
+    desc: "I focus on building scalable, clean, and high-performance solutions with pixel-perfect attention to detail.",
+  },
+  {
+    imgPath: "/images/chat.png",
+    title: "Transparent Collaboration",
+    desc: "Regular updates and clear communication ensure you're always aligned with the progress and vision.",
+  },
+  {
+    imgPath: "/images/time.png",
+    title: "On-Time Execution",
+    desc: "Deadlines matter. I deliver reliable results on time while maintaining top-tier quality standards.",
+  },
+  {
+  imgPath: "/images/cod.png",
+  title: "Full-Stack Expertise",
+  desc: "Building complete web applications using React, Node.js, and modern backend technologies.",
+},
+{
+  imgPath: "/images/rocket.png",
+  title: "Performance Optimization",
+  desc: "Optimizing applications for speed, scalability, and seamless user interaction.",
+}
+];

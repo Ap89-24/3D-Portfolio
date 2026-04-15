@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { FaGithub } from "react-icons/fa";
 import {useGSAP} from "@gsap/react"
 import { motion } from "framer-motion";
+import TitleHeader from "../components/TitleHeader";
 
 
 
@@ -55,8 +56,8 @@ const ShowcaseSection = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
       viewport={{ once: true }}
-       class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text leading-tight  drop-shadow-[0_0_20px_rgba(168,85,247,0.5)] mb-7">
-            Things I’ve Built
+       class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center leading-tight  drop-shadow-[0_0_20px_rgba(168,85,247,0.5)] mb-7">
+           <TitleHeader title={" Things I’ve Built"} sub={"🚀 My  Projects"} />
       </motion.h1>
         <div className="showcaselayout">
           {/*//? LEFT */}

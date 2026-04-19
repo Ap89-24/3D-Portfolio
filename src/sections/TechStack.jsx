@@ -1,6 +1,6 @@
 import React from 'react'
 import TitleHeader from '../components/TitleHeader';
-import { techStackImgs } from '../constants';
+import { techStackIcons } from '../constants';
 import TechIcon from '../components/Models/TechLogos/TechIcon';
 
 const TechStack = () => {
@@ -13,7 +13,7 @@ const TechStack = () => {
          />
 
          <div className="tech-grid">
-            {techStackImgs.map((icon) => (
+            {techStackIcons.map((icon) => (
                 <div key={icon.name} className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg">
                   <div className="tech-card-animated-bg" />    
                   <div className="tech-card-content">

@@ -18,7 +18,8 @@ useEffect(() => {
       }
     })
   }
-})
+});
+
 
   return (
     <Canvas>

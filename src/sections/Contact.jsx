@@ -121,11 +121,14 @@ const Contact = () => {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="group w-full py-3 md:py-4 px-6 bg-white text-black font-semibold rounded-lg flex justify-center items-center gap-2 hover:bg-opacity-90 transition-all duration-300 relative overflow-hidden mt-8"
               >
-                <span className="relative z-10">
-                  {isSubmitted ? "Message Sent! ✓" : "Send Message"}
-                </span>
+               <div className="cta-button group">
+                 <div className="bg-circle" />
+                 <p className="text">Send Message</p>
+                 <div className="arrow-wrapper">
+                  <img src="/images/arrow-down.svg" alt="arrow" />
+                 </div>
+               </div>
               </button>
 
               {/* Success Message */}
@@ -159,9 +162,7 @@ const Contact = () => {
                 <directionalLight position={[10, 10, 10]} intensity={1.2} />
                 <directionalLight position={[-10, -10, -10]} intensity={0.4} />
                 <OrbitControls
-                  autoRotate
-                  autoRotateSpeed={4}
-                  enableZoom={true}
+                  enableZoom={false}
                   enablePan={true}
                   minPolarAngle={Math.PI / 4}
                   maxPolarAngle={(3 * Math.PI) / 4}
